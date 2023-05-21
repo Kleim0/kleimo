@@ -1,13 +1,37 @@
-Colors: 
+b Colors: 
 
 White: #f0f6f0 || rgba(240, 246, 240, 1) || Text
 Black: #222323 || rgba(34, 35, 35, 1) || Main Background
 
 Darker: #191a1a || rgba(25, 26, 26, 1) || Border & other backgruond
 
-UPDATED ::
+-----------------------------------------------------------
+
+current ::
 
 White: #f0f6f0 || rgba(240, 246, 240, 1) || Text
 Black: #2c2d2d || rgba(44, 45, 45, 1) || Main Background
 
 Darker: #1e1f1f || rgba(30, 31, 31, 1) || Border & other backgruond
+
+-----------------------------------------------------------
+
+3.0 :::
+
+White:
+Grey: #2c2d32 - rgba(44, 45, 50)
+Dark Grey: #1e1f24 - rgba(30, 31, 36)
+
+-----------------------------------------------------------
+
+MORe :
+
+White:
+Grey: #2c3237 - rbga(44, 50, 55)
+Dark Grey: #1e2429 - rgba(30, 36, 41)
+
+-----------------------------------------------------------
+
+
+
+
