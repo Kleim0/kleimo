@@ -3,8 +3,13 @@
 	padding:0;
 	--0: 240, 246, 240; /* white (text) */
 	--2: 44, 50, 55; /* light (body bg) */
-	--3: 30, 36, 41; /* dark (top/border)*/
+	--3: 37, 43, 48; /* medium (element bg) */
+	--4: 30, 36, 41; /* dark (border)*/
+	--purp: 90, 71, 128; /* purple (shadow/accent)*/
 }
+
+@media (min-width: 900px) and (min-height: 650px) {
+
 
 body {
 	height: 100vh;
@@ -12,11 +17,13 @@ body {
 	background-color: rgba(var(--2));
 	color: rgba(var(--0));
 	font-family: "Consolas", "Open Sans";
-	border: rgba(var(--3)) 6px solid;
+	border: rgba(var(--4)) 6px solid;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	box-shadow: 0px 0px 8px 2px rgba(var(--4)) inset;
 } 
 
 #button-container {
@@ -24,9 +31,9 @@ body {
 }
 
 #button-container > * {
-	background-color: rgba(var(--3));
+	background-color: rgba(var(--4));
 	border-radius: 4px;
-	box-shadow: 0px 0px 8px 2px rgba(var(--3));
+	box-shadow: 0px 0px 8px 2px rgba(var(--4));
 	padding: 20px 30px 20px 30px;
 	margin: 25px;
 	user-select: none;
@@ -37,27 +44,28 @@ body {
 }
 
 #button-container > *:hover {
-	background-color: rgba(var(--3), 0.5);
-	box-shadow: rgba(var(--3)) 0 0 0 4px;
+	background-color: rgba(var(--3));
+	box-shadow: rgba(var(--4)) 0 0 0 4px;
+	/* box-shadow: rgba(var(--purp)) 0 0 8px 2px; */
 }
 
 #button-container > *:active {
-	background-color: rgba(var(--3), 0.25);
+	background-color: rgba(var(--3), 0.5);
 	transition-duration: 50ms;
 	transition-delay: 0ms;
 }
 
 #info-container {
 	position: relative;
-	border: rgba(var(--3)) 6px solid;
+	border: rgba(var(--4)) 6px solid;
 	border-radius: 4px;
-	background-color: rgba(var(--3), .50);
+	background-color: #252b30;
 	width: 400px;
-	height: 450px;
+	height: 560px;
 	padding: 20px;
 	line-height: 1.5;
 	word-wrap: break-word;
-	box-shadow: 0px 0px 12px 2px rgba(var(--3));
+	box-shadow: 0px 0px 12px 2px rgba(var(--purp));
 }
 
 #info-container > * {
@@ -80,21 +88,199 @@ body {
 }
 
 #socials-container {
+	display: flex;
+	justify-content: center;
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 15px;
+	left: 15px;
+
+	border: 2px dotted rgba(var(--purp));
 }
 
-#social {
+.social {
+	background-color: rgba(var(--4));
+	border: 4px solid rgba(var(--4));
+	border-radius: 4px;
 	padding: 5px;
+	margin: 10px;
+	width: 35px;
+	height: 35px;
+	
+	transition-duration: 300ms;
 }
 
-a {
-	text-decoration: none;
-	color: white;
+.social:hover {
+	background-color: rgba(var(--3), 0.5);
+	border: 4px solid rgba(var(--4));
 }
 
-img {
+.social:active {
+	background-color: rgba(var(--3), 0.25);
+	transition-duration: 50ms;
+	transition-delay: 0ms;
+}
+
+.social-image {
+	object-fit: contain;
 	width: 100%;
 	height: 100%;
+	pointer-events: none;
+	user-select: none;
+}
+
+#skibb {
+	display: none;
+}
+
+#gay {
+	display: none;
+}
+
+#project-wrapper {
+	display: none;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+	line-height: 1;
+}
+
+#project-wrapper > * {
+	background-color: rgba(var(--purp));
+	padding: 10px 30px 10px 30px;
+	margin: 20px;
+	border-radius: 10px;
+	color: rgba(var(--0));
+	font-size: 30px;
+	text-decoration: none;
+
+	transition-duration: 100ms;
+}
+
+#project-wrapper > *:hover {
+	background-color: rgba(var(--purp), 0.5);
+}
+
+.popup {
+	position: absolute;
+	display: flex;
+	background-color: rgba(var(--3), 0.95);
+	border: 6px solid rgba(var(--0));
+	box-shadow: 0px 0px 10px 2px rgba(var(--0)) inset;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width: 350px;
+	height: 200px;
+	justify-content: center;
+	align-items: center;
+	text-align: center
+}
+
+.popup > p {
+	padding: 40px;
+}
+
+.popup > img {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	filter: invert(90%) sepia(2%) saturate(473%) hue-rotate(71deg) brightness(110%) contrast(93%); /* https://codepen.io/sosuke/pen/Pjoqqp -- messy thing I found while looking on stackoverflow :) */
+}
+
+}
+
+@media (max-width: 900px) or (max-height: 650px) {
+
+#wenis {
+	display: none;
+}
+#discord {
+	display: none;
+}
+#project-wrapper {
+	display: none;
+}
+#projects-button {
+	display: none;
+}
+#gay {
+	display: none;
+}	
+	
+body {
+	overflow: hidden;
+	background-color: rgba(var(--2));
+	height: 100vh;
+	color: rgba(var(--0));
+	font-family: "Consolas", "Open Sans";
+	font-size: 0.8em;
+	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+} 
+
+#socials-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	border: 2px dotted rgba(var(--purp));
+}
+	
+.social {
+	background-color: rgba(var(--4));
+	border: 4px solid rgba(var(--4));
+	border-radius: 4px;
+	padding: 5px;
+	margin: 10px;
+	width: 35px;
+	height: 35px;
+}
+	
+.social-image {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+}
+
+#button-container {
+	text-align: center;
+	margin-bottom: 20px;
+	display: flex;
+}
+
+#button-container > * {
+	background-color: rgba(var(--4));
+	border-radius: 4px;
+	box-shadow: 0px 0px 8px 2px rgba(var(--4));
+	padding: 20px 30px 20px 30px;
+	margin: 10px;
+	user-select: none;
+	width: 75px
+}
+	
+#info-container {
+	position: relative;
+	border: rgba(var(--4)) 6px solid;
+	border-radius: 4px;
+	background-color: #252b30;
+	width: 70%;
+	height: 40%;
+	padding: 20px;
+	line-height: 1.5;
+	word-wrap: break-word;
+	box-shadow: 0px 0px 12px 2px rgba(var(--purp));
+}
+
+#info-container > * {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 }

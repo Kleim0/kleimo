@@ -13,17 +13,26 @@
 
 <body>
 	<div id="socials-container">
-		<a class="social" href="https://www.youtube.com/channel/UCl7wnn8vTEl4aFyaxfO7rvg" target="_blank">Youtube</a>
-		<a class="social" href="" target="_blank">Github</a>
-		<a class="social" href="" target="_blank">Discord</a>
+		<a class="social" href="https://www.youtube.com/channel/UCl7wnn8vTEl4aFyaxfO7rvg" target="_blank"><img class="social-image" alt="Youtube" src="icons/youtube-icon.svg"></a>
+		<a class="social" href="https://github.com/Kleim0" target="_blank"><img class="social-image" alt="Github" src="icons/github-icon.svg"></a>
+		<a id="discord" class="social" onclick="navigator.clipboard.writeText('Kleim#1042'); popup('Copied to clipboard! (Kleim#1024) -- Feel free to DM me :0')" ><img class="social-image" alt="Discord" src="icons/discord-icon.svg"></a>
+		<a class="social" href="https://replit.com/@kleimo" target="_blank"><img class="social-image" alt="Replit" src="icons/replit-icon.svg"></a>
 	</div>
 	<div id="button-container">
 		<div onclick="change('about')">About Me</div>
 		<div onclick="change('gay')">Gay</div>
-		<div onclick="change('projects')">Projects</div>
+		<div id="projects-button" onclick="change('projects')">Projects</div>
 	</div>
-	<div id="info-container"> 
-		<div id="skibb"></div>
+	<div id="info-container">
+		<div id="wenis"></div>
+		<div id="skibb">Yo, I started getting into coding around 2020 during the midst of the pandemic becuase I wanted to be a game dev. As you can see from my sad attempts at being zark muckerberg in the projects section, that didn't happen. I haven't really been the most consistent with getting better at coding as to why I still suck, atleast I'm trying :skull: Apart from programming, I enjoy drawing, sports, reading, and playing games :P <br>--<br>You can find my socials & stuff in the top left!</div>
+		<div id="gay">Gay bitch</div>
+		<div id="project-wrapper">
+			<a href="https://drag.kleimo.repl.co/" target="_blank">Drag</a>
+			<a href="https://bing.kleimo.repl.co/" target="_blank">Bing</a>
+			<a href="https://ping.kleimo.repl.co/" target="_blank">Ping</a>
+		</div>
+	</div>
 	<script src="script.js"></script>
 </body>
 
