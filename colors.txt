@@ -26,7 +26,7 @@ Dark Grey: #1e1f24 - rgba(30, 31, 36)
 
 4.0 :
 
-White:
+White: #f0f6f0 || rgba(240, 246, 240, 1)
 Grey: #2c3237 - rbga(44, 50, 55)
 Dark Grey: #1e2429 - rgba(30, 36, 41)
 

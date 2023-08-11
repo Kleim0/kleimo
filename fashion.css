@@ -1,11 +1,10 @@
 * {
 	margin:0;
 	padding:0;
-	--0: 240, 246, 240; /* white (text) */
-	--2: 44, 50, 55; /* light (body bg) */
-	--3: 37, 43, 48; /* medium (element bg) */
-	--4: 30, 36, 41; /* dark (border)*/
-	--purp: 90, 71, 128; /* purple (shadow/accent)*/
+	--0: 255, 255, 255; /* white (text) #ffffff */
+	--2: 65, 76, 88; /* light (body bg) */
+	--3: 57, 65, 76; /* medium (element bg) */
+	--4: 47, 56, 65; /* dark (border)*/
 }
 
 @media (min-width: 900px) and (min-height: 650px) {
@@ -31,41 +30,37 @@ body {
 }
 
 #button-container > * {
-	background-color: rgba(var(--4));
+	background-color: rgba(var(--3));
+	box-shadow: rgba(var(--4)) 0 0 0 2px;
 	border-radius: 4px;
-	box-shadow: 0px 0px 8px 2px rgba(var(--4));
 	padding: 20px 30px 20px 30px;
 	margin: 25px;
 	user-select: none;
 	width: 80px;
 
-	transition-delay: 20ms;
 	transition-duration: 300ms;
 }
 
 #button-container > *:hover {
 	background-color: rgba(var(--3));
 	box-shadow: rgba(var(--4)) 0 0 0 4px;
-	/* box-shadow: rgba(var(--purp)) 0 0 8px 2px; */
 }
 
 #button-container > *:active {
 	background-color: rgba(var(--3), 0.5);
 	transition-duration: 50ms;
-	transition-delay: 0ms;
 }
 
 #info-container {
 	position: relative;
 	border: rgba(var(--4)) 6px solid;
 	border-radius: 4px;
-	background-color: #252b30;
+	background-color: rgba(var(--3));
 	width: 400px;
 	height: 560px;
 	padding: 20px;
 	line-height: 1.5;
 	word-wrap: break-word;
-	box-shadow: 0px 0px 12px 2px rgba(var(--purp));
 }
 
 #info-container > * {
@@ -93,8 +88,6 @@ body {
 	position: absolute;
 	top: 15px;
 	left: 15px;
-
-	border: 2px dotted rgba(var(--purp));
 }
 
 .social {
@@ -146,7 +139,6 @@ body {
 }
 
 #project-wrapper > * {
-	background-color: rgba(var(--purp));
 	padding: 10px 30px 10px 30px;
 	margin: 20px;
 	border-radius: 10px;
@@ -158,7 +150,6 @@ body {
 }
 
 #project-wrapper > *:hover {
-	background-color: rgba(var(--purp), 0.5);
 }
 
 .popup {
@@ -227,7 +218,6 @@ body {
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
-	border: 2px dotted rgba(var(--purp));
 }
 	
 .social {
@@ -274,7 +264,6 @@ body {
 	padding: 20px;
 	line-height: 1.5;
 	word-wrap: break-word;
-	box-shadow: 0px 0px 12px 2px rgba(var(--purp));
 }
 
 #info-container > * {
